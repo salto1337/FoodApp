@@ -15,7 +15,6 @@ export function Header({ setIsFormShown }) {
 
 	function handleMenuToggle() {
 		setIsMenuShown((prevState) => !prevState);
-		console.log("klik");
 	}
 
 	function handleLogin() {

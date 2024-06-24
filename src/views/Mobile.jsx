@@ -1,5 +1,5 @@
 import { MobileSection } from "../components/MobileSection";
-import hero_img from "../assets/header_img.png";
+import hero_img from "../assets/header_img.webp";
 
 export function Mobile() {
 	return (

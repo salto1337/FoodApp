@@ -28,7 +28,7 @@ export function CartItem({ product }) {
 
 	return (
 		<div className="grid grid-cols-mobile lg:grid-cols-dekstop border-t-2 border-500-gray py-3">
-			<img className="w-[40px] md:w-[80px]" src={product.image} />
+			<img src={product.image} className="w-[40px] md:w-[80px]" />
 			<h3 className="font-bold">{product.title}</h3>
 			<p className="font-semibold">${product.price}</p>
 			<p>{product.quantity}</p>

@@ -50,28 +50,28 @@ export function FoodItem({ item }) {
 	return (
 		<div className="shadow w-[300px] sm:w-[350px] 2xl:w-auto">
 			<div className="relative">
-				<img className="rounded-t-lg" src={item.image} alt={item.name} />
+				<img src={item.image} alt={item.name} className="rounded-t-lg" />
 				{existingProduct && existingProduct.quantity > 0 ? (
 					<div className="absolute right-2 bottom-2 p-1 flex items-center gap-2 bg-white rounded-full">
 						<img
-							onClick={handleRemoveFood}
-							className="cursor-pointer"
 							src={remove}
 							alt="minus"
+							onClick={handleRemoveFood}
+							className="cursor-pointer"
 						/>
 						<p>{existingProduct.quantity}</p>
 						<img
-							onClick={handleAddProduct}
-							className="cursor-pointer"
 							src={green_plus}
 							alt="plus"
+							onClick={handleAddProduct}
+							className="cursor-pointer"
 						/>
 					</div>
 				) : (
 					<img
-						className="absolute right-2 bottom-2 cursor-pointer"
 						src={white_plus}
 						alt="plus"
+						className="absolute right-2 bottom-2 cursor-pointer"
 						onClick={handleAddProduct}
 					/>
 				)}

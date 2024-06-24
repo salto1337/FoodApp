@@ -1,5 +1,5 @@
 import { scrollIntoSection } from "../utils/scrollIntoSection";
-import hero_img from "../assets/header_img.png";
+import hero_img from "../assets/header_img.webp";
 
 export function Hero() {
 	return (
