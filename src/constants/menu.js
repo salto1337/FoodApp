@@ -1,11 +1,11 @@
-import menu1 from "../assets/menu_1.png";
-import menu2 from "../assets/menu_2.png";
-import menu3 from "../assets/menu_3.png";
-import menu4 from "../assets/menu_4.png";
-import menu5 from "../assets/menu_5.png";
-import menu6 from "../assets/menu_6.png";
-import menu7 from "../assets/menu_7.png";
-import menu8 from "../assets/menu_8.png";
+import menu1 from "../assets/menu_1.webp";
+import menu2 from "../assets/menu_2.webp";
+import menu3 from "../assets/menu_3.webp";
+import menu4 from "../assets/menu_4.webp";
+import menu5 from "../assets/menu_5.webp";
+import menu6 from "../assets/menu_6.webp";
+import menu7 from "../assets/menu_7.webp";
+import menu8 from "../assets/menu_8.webp";
 
 export const MENU = [
 	{
