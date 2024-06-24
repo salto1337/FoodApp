@@ -3,6 +3,8 @@
 
 Tomato allows you to buy food through their website or via a mobile app, which can be downloaded using the downloadd picture. Products are fetched using the backend. Items in the cart are stored using local storage.
 
+## E-mail: example@example.com
+## Password: examplePassword12@!!
 ## Tech Stack
 
 **Client:** React, TailwindCSS
@@ -15,3 +17,4 @@ Tomato allows you to buy food through their website or via a mobile app, which c
 ![App Screenshot](https://scontent-waw2-1.xx.fbcdn.net/v/t1.15752-9/448971571_2498802790508470_6471202406287478386_n.png?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=CzJfd6Ky834Q7kNvgHeMQ8a&_nc_ht=scontent-waw2-1.xx&oh=03_Q7cD1QFocPbOfYpCpzol9kJ4MUNLhRec-ygP1beMBMatyTesyw&oe=66A0CE18)
 
 
+<p>Design inspired by GreatStack</p>
