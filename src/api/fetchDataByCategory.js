@@ -1,9 +1,17 @@
 import { BACK_END_URL } from "../constants/api";
 
-export function fetchDataByCategory(category) {
-	return fetch(`${BACK_END_URL}/food/${category}`)
-		.then((res) => res.json())
-		.then((data) => {
-			return data;
-		});
+export async function fetchDataByCategory(category) {
+	try {
+		const response = await fetch(`${BACK_END_URL}/food/${category}`);
+
+		if (!response.ok) {
+			throw new Error("Category Fetch Failed");
+		}
+
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Fetch error:", error);
+		throw error;
+	}
 }
