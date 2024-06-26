@@ -17,7 +17,6 @@ const router = createBrowserRouter([
 			{
 				path: "",
 				element: <MainPage />,
-				loader: productLoader,
 			},
 			{
 				path: "/mobile",

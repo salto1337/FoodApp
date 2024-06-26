@@ -3,17 +3,37 @@ import { Hero } from "../components/Hero";
 import { MenuItem } from "../components/MenuItem";
 import { FoodItem } from "../components/FoodItem";
 import { MENU } from "../constants/menu";
-import { useLoaderData } from "react-router-dom";
+import { MobileSection } from "../components/MobileSection";
 import { Pagination } from "../components/Pagination";
 import { fetchDataByCategory } from "../api/fetchDataByCategory";
-import { MobileSection } from "../components/MobileSection";
+import { BACK_END_URL } from "../constants/api";
 
 export function MainPage() {
-	const data = useLoaderData();
+	const [data, setData] = useState([]);
 	const [foodList, setFoodList] = useState([]);
 	const [category, setCategory] = useState("");
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+	const [page, setPage] = useState(1);
+
+	useEffect(() => {
+		async function productLoader() {
+			try {
+				const response = await fetch(`${BACK_END_URL}/food?page=${page}`);
+				if (!response.ok) {
+					throw new Error("Fetch failed");
+				}
+
+				const data = await response.json();
+				setData(data);
+				setLoading(false);
+			} catch (error) {
+				console.error("Fetch error:", error);
+				throw error;
+			}
+		}
+		productLoader();
+	}, [page]);
 
 	async function handleFilter(category) {
 		setCategory(category);
@@ -28,9 +48,8 @@ export function MainPage() {
 	}
 
 	useEffect(() => {
-		if (data) {
+		if (data.items) {
 			setFoodList(data.items);
-			setLoading(false);
 		}
 	}, [data]);
 
@@ -72,6 +91,7 @@ export function MainPage() {
 						setLoading={setLoading}
 						category={category}
 						setCategory={setCategory}
+						setPage={setPage}
 					/>
 				</div>
 			</div>

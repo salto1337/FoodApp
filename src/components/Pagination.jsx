@@ -1,7 +1,13 @@
 import { useSearchParams } from "react-router-dom";
 import { scrollIntoSection } from "../utils/scrollIntoSection";
 
-export function Pagination({ number, setLoading, category, setCategory }) {
+export function Pagination({
+	number,
+	setLoading,
+	category,
+	setCategory,
+	setPage,
+}) {
 	const [searchParams, setSearchParams] = useSearchParams();
 	const currentPage = searchParams.get("page");
 
@@ -26,7 +32,10 @@ export function Pagination({ number, setLoading, category, setCategory }) {
 								? "font-bold text-[18px]"
 								: ""
 						}`}
-						onClick={() => handleChange(index + 1)}>
+						onClick={() => {
+							handleChange(index + 1);
+							setPage(index + 1);
+						}}>
 						{index + 1}
 					</li>
 				);
