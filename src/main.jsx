@@ -4,7 +4,6 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./components/Layout.jsx";
 import { MainPage } from "./views/MainPage.jsx";
-import { productLoader } from "./api/productLoader.js";
 import { Cart } from "./views/Cart.jsx";
 import { Contact } from "./views/Contact.jsx";
 import { Mobile } from "./views/Mobile.jsx";
