@@ -86,13 +86,15 @@ export function MainPage() {
 					</div>
 				)}
 				<div className="flex justify-center">
-					<Pagination
-						number={data.totalPages}
-						setLoading={setLoading}
-						category={category}
-						setCategory={setCategory}
-						setPage={setPage}
-					/>
+					{!loading && (
+						<Pagination
+							number={data.totalPages}
+							setLoading={setLoading}
+							category={category}
+							setCategory={setCategory}
+							setPage={setPage}
+						/>
+					)}
 				</div>
 			</div>
 			<MobileSection />
