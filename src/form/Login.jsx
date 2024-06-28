@@ -45,7 +45,12 @@ export function Login({ onClose }) {
 					)}
 					<div className="flex justify-between items-center mb-3">
 						<h2 className="font-bold text-2xl">Login</h2>
-						<img className="w-[25px] cursor-pointer" src={x_icon} alt="x" onClick={onClose} />
+						<img
+							className="w-[25px] cursor-pointer"
+							src={x_icon}
+							alt="x"
+							onClick={onClose}
+						/>
 					</div>
 					<input
 						id="email"
@@ -84,7 +89,7 @@ export function Login({ onClose }) {
 					<p className="text-[14px] text-gray-500 mt-5">
 						Dont have an account?
 						<span className="text-orange-500 font-semibold cursor-pointer">
-							Login here
+							Register here
 						</span>
 					</p>
 				</form>
