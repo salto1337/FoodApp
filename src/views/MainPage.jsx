@@ -74,7 +74,7 @@ export function MainPage() {
 				</div>
 			</div>
 			{error && <span className="text-red-500 my-2">{error}</span>}
-			<div className="mt-5 min-h-[100vh]" id="products">
+			<div className="mt-5" id="products">
 				<h2 className="font-bold text-2xl mb-5">Top dishes near you</h2>
 				{loading ? (
 					<p>Loading...</p>
