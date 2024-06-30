@@ -1,1 +1,1 @@
-export const BACK_END_URL = "https://foodapp-backend-t8uh.onrender.com";
+export const BACK_END_URL = "https://food-app-backend-seven.vercel.app";
